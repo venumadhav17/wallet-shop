@@ -11,7 +11,7 @@ const Companies = () => {
   ];
 
   return (
-    <div className='p-20 grid grid-cols-5 gap-10 justify-around items-center relative'>
+    <div className='py-20 grid grid-cols-5 gap-10 justify-around items-center relative z-20'>
       {companyes.map((item, src) => (
         <Image
           key={src}
