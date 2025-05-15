@@ -5,8 +5,8 @@ import Link from "next/link";
 
 const AboutUs = () => {
   return (
-    <div className='bg-[#ddf057]'>
-      <div className='grid grid-cols-2 my-20 pt-20 gap-20'>
+    <div className=''>
+      <div className='grid grid-cols-2 my-20 pt-20 gap-20 bg-[#ddf057]'>
         <div>
           <h1 className='text-5xl font-bold leading-tight'>About Us</h1>
           <p className='text-xl text-gray-600 font-normal py-8 w-[90%]'>

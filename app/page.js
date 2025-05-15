@@ -18,10 +18,11 @@ export default function Home() {
         <Supports />
         <CreativeDesign />
         <Digital />
-        <AboutUs />
+      </div>
+      <AboutUs />
+      <div className='container mx-auto px-10'>
         <Testimonials />
         <Subscribe />
-        <Footer />
       </div>
     </div>
   );

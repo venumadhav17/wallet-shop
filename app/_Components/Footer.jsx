@@ -1,10 +1,9 @@
 import {
   Facebook,
   Instagram,
+  Mail,
+  MapPin,
   Phone,
-  PhoneCall,
-  PhoneCallIcon,
-  PhoneIcon,
   Twitter
 } from "lucide-react";
 import Image from "next/image";
@@ -27,15 +26,29 @@ const Footer = () => {
     {
       title: "Contact Us",
       items: [
-        "+1 (555) 123-4567",
-        "support@wallet.com",
-        "123 Business Ave, Suite 100"
+        {
+          icon: (
+            <Phone
+              size={16}
+              className='mr-2 my-1 text-yellow-500 text-center'
+            />
+          ),
+          text: "+1 (555) 123-4567"
+        },
+        {
+          icon: <Mail size={16} className='mr-2 my-1 text-yellow-500' />,
+          text: "support@wallet.com"
+        },
+        {
+          icon: <MapPin size={16} className='mr-1 text-yellow-500' />,
+          text: "123 Business Ave, Suite 100"
+        }
       ]
     }
   ];
   return (
-    <div>
-      <div className='flex border-1 border-gray-200 pt-50 pb-30'>
+    <div className='bg-gray-50'>
+      <div className='flex border-b-2 border-gray-200 mt-40 pt-20 pb-20'>
         {/* Footer-Wallet Section */}
         <div>
           <Image
@@ -56,35 +69,34 @@ const Footer = () => {
         </div>
 
         {/* Quick-Links Footer Section */}
-        <div className='grid grid-cols-4 gap-25 pr-10'>
-          {Links.map((item, title) => (
-            <div key={title}>
-              <h1 className='font-bold text-2xl'>{item.title}</h1>
-              {item.items.map((text, idx) =>
-                item.title === "Contact Us" ? (
-                  <p
-                    key={idx}
-                    className='block text-gray-600 pb-2 text-lg py-3'
-                  >
-                    {text}
-                  </p>
-                ) : (
-                  <Link
-                    href='#'
-                    key={idx}
-                    className='block pt-4 text-gray-600 text-lg'
-                  >
-                    {text}
-                  </Link>
-                )
-              )}
+        <div className='grid grid-cols-4 gap-25 pt-2'>
+          {Links.map((section, index) => (
+            <div key={index}>
+              <h1 className='text-xl font-normal text-gray-800 mb-3'>
+                {section.title}
+              </h1>
+              {section.items?.map((item, index) => (
+                <div key={index} className='pt-5 text-gray-600 text-md flex'>
+                  {section.title === "Contact Us" ? (
+                    <>
+                      {item.icon}
+                      <span>{item.text}</span>
+                    </>
+                  ) : (
+                    <Link href='#' className='hover:text-yellow-300'>
+                      {item}
+                    </Link>
+                  )}
+                </div>
+              ))}
             </div>
           ))}
         </div>
       </div>
+
       {/*  All rights reserved. */}
       <div className='text-center py-10 text-gray-400 font-normal text-lg'>
-        © 2025 Wallet. All rights reserved.
+        © {new Date().getFullYear()} Wallet. All rights reserved.
       </div>
     </div>
   );
