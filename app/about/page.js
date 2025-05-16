@@ -1,21 +1,10 @@
 import Image from "next/image";
+import CommonHeader from "../_Components/CommonHeader";
 
 const About = () => {
   return (
     <div>
-      <div className='bg-black'>
-        <Image
-          src='/Assets/aboutbackground.jpg'
-          alt=''
-          width={500}
-          height={100}
-          // fill
-          className='h-[450px] w-full opacity-25 object-cover'
-        />
-        <h1 className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-14 leading-tight text-white font-bold text-6xl'>
-          Our Story
-        </h1>
-      </div>
+      <CommonHeader label='Our Story' />
 
       {/* Crafting Excellence */}
       <div className='container mx-auto mt-40 px-20'>

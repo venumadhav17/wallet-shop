@@ -48,7 +48,7 @@ const Footer = () => {
   ];
   return (
     <div className='bg-gray-50'>
-      <div className='flex border-b-2 border-gray-200 mt-40 pt-20 pb-20'>
+      <div className='flex border-b-2 border-gray-200 mt-30 pt-30 pb-20'>
         {/* Footer-Wallet Section */}
         <div>
           <Image
@@ -72,7 +72,7 @@ const Footer = () => {
         <div className='grid grid-cols-4 gap-25 pt-2'>
           {Links.map((section, index) => (
             <div key={index}>
-              <h1 className='text-xl font-normal text-gray-800 mb-3'>
+              <h1 className='text-2xl font-bold text-gray-800 mb-3'>
                 {section.title}
               </h1>
               {section.items?.map((item, index) => (

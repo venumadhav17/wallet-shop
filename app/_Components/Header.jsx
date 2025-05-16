@@ -34,16 +34,19 @@ export default function Header() {
           </button>
         </div>
         <PopoverGroup className='hidden lg:flex lg:gap-x-12'>
-          <Link href='#' className='text-lg font-normal text-gray-900'>
+          <Link href='/' className='text-lg font-normal text-gray-900'>
             Home
           </Link>
           <Link href='/about' className='text-lg font-normal text-gray-900'>
             About
           </Link>
-          <Link href='#' className='text-lg font-normal text-gray-900'>
+          <Link href='/products' className='text-lg font-normal text-gray-900'>
             Products
           </Link>
-          <Link href='#' className='text-lg font-normal text-gray-900'>
+          <Link
+            href='/testimonials'
+            className='text-lg font-normal text-gray-900'
+          >
             Testimonials
           </Link>
         </PopoverGroup>
